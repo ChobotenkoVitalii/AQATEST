@@ -1,0 +1,24 @@
+{
+  "name": "aqatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "api": "npx playwright test --project=api-tests",
+    "test ui": "npx playwright test --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.61.1",
+    "@types/node": "^26.1.1",
+    "eslint": "^10.8.1"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.6.0",
+    "dotenv": "^17.4.2"
+  }
+}
