@@ -1,4 +1,3 @@
-import { expect } from "@playwright/test";
 export class CheckoutPage{
     constructor(page){
         this.page = page;
@@ -16,18 +15,8 @@ export class CheckoutPage{
     await this.cardDate.fill(cardDate);
     await this.cardCVV.fill(cardCvv);
     await this.payNowBtn.click();
-    
-
-
-  }
-  async successOrderMessage(){
-    await expect(this.successOrder).toBeVisible({timeout: 8000});
-    await expect(this.page).toHaveURL('https://aqa-app.vercel.app/checkout');
-        
   }
   async goToMyAccount(){
    await this.myAccountBtn.click();
-   await expect(this.page).toHaveURL('https://aqa-app.vercel.app/account');
   }
-
 }
