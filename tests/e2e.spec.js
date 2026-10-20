@@ -11,6 +11,36 @@ import {CheckoutPage} from '../page-object/Checkout.page';
 import {MyAccountPage} from '../page-object/MyAccount.page';
 
 test.setTimeout(50*1000);
+
+test.describe('e2e: order flow', () => {
+
+  test.beforeAll(async()=>{
+    console.log('Before all: prepare test data');
+    console.log('Before all: generate users');
+    console.log('Before all: ready');
+  })
+
+  test.beforeEach(async({})=>{
+    console.log('Before Each: prepare test data');
+  })
+
+  test.afterEach(async({page,},testinfo)=>{
+    if (testinfo.status !== testinfo.expectedStatus) {
+      console.log(`After Each: Test failed: ${testinfo.title}`);
+
+      await page.screenshot({
+        path:'test-results/${testInfo.titile}-failed.png',
+        fullPage: true,
+      });
+    }
+  })
+
+  test.afterAll(async()=>{
+    console.log('After all: clean up test data');
+  })
+
+
+
 test.use({ viewport: { width: 1024, height: 760 } });
 test('Create user, login, order 2 items, payment', async ({ page }) => {
   const registerPage = new RegisterPage(page);
@@ -95,6 +125,5 @@ test('Create user, login, order 2 items, payment', async ({ page }) => {
   await test.step('Logout', async() => {
     await myAccountPage.logout();
   })
-
-}
-)
+  })
+})
