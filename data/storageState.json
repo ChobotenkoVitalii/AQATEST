@@ -1,0 +1,22 @@
+{
+  "cookies": [],
+  "origins": [
+    {
+      "origin": "https://aqa-app.vercel.app",
+      "localStorage": [
+        {
+          "name": "currentUser",
+          "value": "Declan_Kiehn@yahoo.com"
+        },
+        {
+          "name": "users",
+          "value": "[{\"firstName\":\"Demo\",\"lastName\":\"Admin\",\"email\":\"admin\",\"password\":\"admin123\",\"city\":\"Kyiv\",\"country\":\"Ukraine\",\"phone\":\"+380501234567\",\"street\":\"Main Street 1\",\"zip\":\"01001\"},{\"firstName\":\"Kerry\",\"lastName\":\"Lesch\",\"email\":\"Declan_Kiehn@yahoo.com\",\"password\":\"5bv5NvXo4tehrCq\",\"city\":\"Lake Archieberg\",\"country\":\"Ukraine\",\"phone\":\"+380698.321.4607 x2096\",\"street\":\"1784 Kuhlman Run\",\"zip\":\"18555\"}]"
+        },
+        {
+          "name": "isAuthenticated",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}
