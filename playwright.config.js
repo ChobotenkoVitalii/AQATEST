@@ -35,7 +35,7 @@ export default defineConfig({
     timeout: 60 * 1000,
     actionTimeout: 10 * 1000,
     navigationTimeout: 10 * 1000,
-    headless: false,
+    headless: true,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -49,7 +49,8 @@ export default defineConfig({
     {
       name: 'setup-ui',
       testMatch: 'auth.setup.js',
-      use:{baseURL: process.env.UI_BASE_URL}
+      use:{baseURL: process.env.UI_BASE_URL,
+      }
     },
     {
       name: 'e2e-tests',

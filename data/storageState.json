@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "currentUser",
-          "value": "Katrina_Murray-Larson12@yahoo.com"
+          "value": "Merlin_Waters88@hotmail.com"
         },
         {
           "name": "users",
-          "value": "[{\"firstName\":\"Demo\",\"lastName\":\"Admin\",\"email\":\"admin\",\"password\":\"admin123\",\"city\":\"Kyiv\",\"country\":\"Ukraine\",\"phone\":\"+380501234567\",\"street\":\"Main Street 1\",\"zip\":\"01001\"},{\"firstName\":\"Santino\",\"lastName\":\"Spinka\",\"email\":\"Katrina_Murray-Larson12@yahoo.com\",\"password\":\"hBdFa7mOQrWdLUI\",\"city\":\"St. Clair Shores\",\"country\":\"Ukraine\",\"phone\":\"+380455.573.9288 x33740\",\"street\":\"9912 Coy Corner\",\"zip\":\"43955\"}]"
+          "value": "[{\"firstName\":\"Demo\",\"lastName\":\"Admin\",\"email\":\"admin\",\"password\":\"admin123\",\"city\":\"Kyiv\",\"country\":\"Ukraine\",\"phone\":\"+380501234567\",\"street\":\"Main Street 1\",\"zip\":\"01001\"},{\"firstName\":\"Wilbert\",\"lastName\":\"Stiedemann\",\"email\":\"Merlin_Waters88@hotmail.com\",\"password\":\"gOxyufYwT85qeB0\",\"city\":\"Indio\",\"country\":\"Ukraine\",\"phone\":\"+380227.618.9506\",\"street\":\"2115 Stiedemann Tunnel\",\"zip\":\"91481\"}]"
         },
         {
           "name": "isAuthenticated",
