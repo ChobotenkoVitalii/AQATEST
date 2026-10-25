@@ -6,11 +6,11 @@
       "localStorage": [
         {
           "name": "currentUser",
-          "value": "James46@yahoo.com"
+          "value": "Katrina_Murray-Larson12@yahoo.com"
         },
         {
           "name": "users",
-          "value": "[{\"firstName\":\"Demo\",\"lastName\":\"Admin\",\"email\":\"admin\",\"password\":\"admin123\",\"city\":\"Kyiv\",\"country\":\"Ukraine\",\"phone\":\"+380501234567\",\"street\":\"Main Street 1\",\"zip\":\"01001\"},{\"firstName\":\"Daren\",\"lastName\":\"Ruecker\",\"email\":\"James46@yahoo.com\",\"password\":\"7iMtYO1RN5TzCkm\",\"city\":\"Antwanworth\",\"country\":\"Ukraine\",\"phone\":\"+380590-845-0455 x6347\",\"street\":\"1564 Harber Estates\",\"zip\":\"92887-2799\"}]"
+          "value": "[{\"firstName\":\"Demo\",\"lastName\":\"Admin\",\"email\":\"admin\",\"password\":\"admin123\",\"city\":\"Kyiv\",\"country\":\"Ukraine\",\"phone\":\"+380501234567\",\"street\":\"Main Street 1\",\"zip\":\"01001\"},{\"firstName\":\"Santino\",\"lastName\":\"Spinka\",\"email\":\"Katrina_Murray-Larson12@yahoo.com\",\"password\":\"hBdFa7mOQrWdLUI\",\"city\":\"St. Clair Shores\",\"country\":\"Ukraine\",\"phone\":\"+380455.573.9288 x33740\",\"street\":\"9912 Coy Corner\",\"zip\":\"43955\"}]"
         },
         {
           "name": "isAuthenticated",
