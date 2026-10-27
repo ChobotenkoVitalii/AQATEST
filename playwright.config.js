@@ -16,20 +16,31 @@ dotenv.config({path:'.env'});
  */
 export default defineConfig({
   testDir: './tests',
+  globalTeardown: './global-teardown.js',
   /* Run tests in files in parallel */
   fullyParallel: false,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: 0,
+  retries: process.env.CI ? 1 : 0,
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 1 : undefined,
+  workers: process.env.CI ? 1 : 2,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    timeout: 45*1000,
-    headless: false,
+    geolocation: {
+      latitude: 51.5074,
+      longitude: 0.1278,
+    },
+    permissions: ['geolocation'],
+    timeout: 60 * 1000,
+    actionTimeout: 10 * 1000,
+    navigationTimeout: 10 * 1000,
+    headless: true,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -41,8 +52,16 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
-      name: 'chromium',
+      name: 'setup-ui',
+      testMatch: 'auth.setup.js',
+      use:{baseURL: process.env.UI_BASE_URL,
+      }
+    },
+    {
+      name: 'e2e-tests',
       testMatch: 'e2e.spec.js',
+      dependencies: ['setup-ui'],
+      use:{baseURL: process.env.UI_BASE_URL, storageState: 'data/storageState.json'}
     },
     {
       name:'api-tests',
