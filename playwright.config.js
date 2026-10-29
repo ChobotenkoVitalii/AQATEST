@@ -15,6 +15,7 @@ dotenv.config({path:'.env'});
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
+  snapshotDir:'./data/',
   testDir: './tests',
   globalTeardown: './global-teardown.js',
   /* Run tests in files in parallel */
@@ -40,7 +41,7 @@ export default defineConfig({
     timeout: 60 * 1000,
     actionTimeout: 10 * 1000,
     navigationTimeout: 10 * 1000,
-    headless: true,
+    headless: false,
     /* Base URL to use in actions like `await page.goto('')`. */
     // baseURL: 'http://localhost:3000',
 
@@ -60,6 +61,12 @@ export default defineConfig({
     {
       name: 'e2e-tests',
       testMatch: 'e2e.spec.js',
+      dependencies: ['setup-ui'],
+      use:{baseURL: process.env.UI_BASE_URL, storageState: 'data/storageState.json'}
+    },
+    {
+      name: 'visual-regression',
+      testMatch: 'visualRegression.spec.js',
       dependencies: ['setup-ui'],
       use:{baseURL: process.env.UI_BASE_URL, storageState: 'data/storageState.json'}
     },
