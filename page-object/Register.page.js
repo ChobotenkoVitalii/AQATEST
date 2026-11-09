@@ -1,18 +1,19 @@
+const{AbstractPage} = require('./Abstract.page');
 
-export class RegisterPage{
-constructor(page) {
-    this.page=page;
-    this.registerBtn = page.locator('[id="login-register-button"]');
-    this.firstNameField = page.locator('[id="register-first-name"]');
-    this.lastNameField = page.locator('[id="register-last-name"]');
-    this.emailAdressField = page.locator('[id="register-email"]');
-    this.passwordField = page.locator('[id="register-password"]');
-    this.cityField = page.locator('[id="register-city"]');
-    this.countryDropDown = page.locator('[id="register-country"]');
-    this.phoneField = page.locator('[id="register-phone"]');
-    this.streetAndHouseNumberField = page.locator('[id="register-street"]');
-    this.zipCodeField = page.locator('[id="register-zip"]');
-    this.submitRegistrationBtn = page.locator('[id="register-button"]');
+export class RegisterPage extends AbstractPage {
+    constructor(page) {
+        super(page);
+        this.registerBtn = page.locator('[id="login-register-button"]');
+        this.firstNameField = page.locator('[id="register-first-name"]');
+        this.lastNameField = page.locator('[id="register-last-name"]');
+        this.emailAdressField = page.locator('[id="register-email"]');
+        this.passwordField = page.locator('[id="register-password"]');
+        this.cityField = page.locator('[id="register-city"]');
+        this.countryDropDown = page.locator('[id="register-country"]');
+        this.phoneField = page.locator('[id="register-phone"]');
+        this.streetAndHouseNumberField = page.locator('[id="register-street"]');
+        this.zipCodeField = page.locator('[id="register-zip"]');
+        this.submitRegistrationBtn = page.locator('[id="register-button"]');
 }
     async openLoginPage(){
         await this.page.goto('/login')

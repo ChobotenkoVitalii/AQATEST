@@ -1,6 +1,8 @@
-export class CheckoutPage{
+const {AbstractPage} = require('./Abstract.page');
+
+export class CheckoutPage extends AbstractPage {
     constructor(page){
-        this.page = page;
+        super(page);
         this.cardNumberField = page.getByPlaceholder('Card Number (16 digits)');
         this.payNowBtn = page.getByRole('button', {name:'Pay Now'});
         this.cardDate = page.getByPlaceholder('MM/YY');

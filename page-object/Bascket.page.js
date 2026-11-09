@@ -1,6 +1,8 @@
-export class BascketPage{
+const{AbstractPage} = require('./Abstract.page');
+
+export class BascketPage extends AbstractPage {
     constructor(page, productInfo) {
-        this.page = page;
+        super(page);
         this.firstProductItem = page.locator('[id="cart-item-name-6"]');
         this.secondProductItem = page.locator('[id="cart-item-name-5"]');
 

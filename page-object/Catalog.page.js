@@ -1,15 +1,17 @@
-export class CatalogPage {
-constructor(page){
-    this.page = page;
-    this.coffeeMachineProduct = page.locator('[id="product-add-6"]');
-    this.tabletProduct = page.locator('[id="product-add-5"]');
-    this.basketCount = page.locator('[id="cart-count"]');
+const {AbstractPage} = require('./Abstract.page');
 
-    this.tabletName = page.locator('[id="product-name-5"]');
-    this.coffeeMachineName = page.locator('[id="product-name-6"]');
+export class CatalogPage extends AbstractPage {
+    constructor(page) {
+        super(page);
+        this.coffeeMachineProduct = page.locator('[id="product-add-6"]');
+        this.tabletProduct = page.locator('[id="product-add-5"]');
+        this.basketCount = page.locator('[id="cart-count"]');
 
-    this.tabletPrice = page.locator('[id="product-price-5"]');
-    this.coffeeMachinePrice = page.locator('[id="product-price-6"]');
+        this.tabletName = page.locator('[id="product-name-5"]');
+        this.coffeeMachineName = page.locator('[id="product-name-6"]');
+
+        this.tabletPrice = page.locator('[id="product-price-5"]');
+        this.coffeeMachinePrice = page.locator('[id="product-price-6"]');
     }
     async selectProduct(){
         await this.coffeeMachineProduct.click({timeout:2000});
