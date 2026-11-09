@@ -13,9 +13,9 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.61.1",
+    "@playwright/test": "^1.65.0",
     "@types/node": "^26.1.1",
-    "eslint": "^10.8.1"
+    "eslint": "^9.39.5"
   },
   "dependencies": {
     "@faker-js/faker": "^10.6.0",
